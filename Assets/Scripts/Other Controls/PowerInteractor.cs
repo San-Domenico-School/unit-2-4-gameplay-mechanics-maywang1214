@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*******************************************************
- * Component of the game manager, 
+ * Component of the ice sphere, 
  * 
  * Yuqin Wang
  * January 16, 2024 version 1.0
