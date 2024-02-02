@@ -176,7 +176,7 @@ MonoBehaviour:
   playerRepelForce: 0.75
   playerBounce: 0.75
   waypoints: []
-  debugSpawnWaves: 0
+  debugSpawnWaves: 1
   debugSpawnPortal: 0
   debugSpawnPowerUp: 0
   debugPowerUpRepel: 0
