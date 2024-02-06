@@ -43,6 +43,10 @@ public class PlayerController : MonoBehaviour
         inputAction.Enable();
         inputAction.Player.Movement.performed += OnMovementPerformed;
         inputAction.Player.Movement.canceled += OnMovementCanceled;
+        if(GameManager.Instance.debugPowerUpRepel)
+        {
+            hasPowerUp = true;
+        }
     }
 
     private void OnDisable()

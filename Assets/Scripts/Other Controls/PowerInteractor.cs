@@ -17,11 +17,26 @@ public class PowerInteractor : MonoBehaviour
 
     private void Start()
     {
-        
+        iceSphereRB = GetComponent<Rigidbody>();
+        iceSphereController = GetComponent<IceSphereController>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            GameObject player = collision.gameObject;
+            Rigidbody playerRigidbody = player.GetComponent< Rigidbody>();
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            Vector3 direction = (player.transform.position - transform.position).normalized;
+            if(playerController.hasPowerUp)
+            {
+                iceSphereRB.AddForce(-direction * playerRigidbody.mass * GameManager.Instance.playerRepelForce, ForceMode.Impulse);
+            }
+            else
+            {
+                playerRigidbody.AddForce(direction * playerRigidbody.mass * GameManager.Instance.playerRepelForce, ForceMode.Impulse);
+            }
+        }
     }
 }
