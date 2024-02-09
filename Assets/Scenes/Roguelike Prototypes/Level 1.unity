@@ -177,7 +177,7 @@ MonoBehaviour:
   playerBounce: 0.75
   waypoints: []
   debugSpawnWaves: 0
-  debugSpawnPortal: 0
+  debugSpawnPortal: 1
   debugSpawnPowerUp: 0
   debugPowerUpRepel: 0
 --- !u!1001 &245963551
@@ -278,6 +278,90 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fd5555088952419ebf0eb82e9096fa5, type: 3}
+--- !u!1001 &497912724
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042949334461136858, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770902384930390026, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_Name
+      value: PortalRing_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770902384930390026, guid: 6aed649864726473582ea78d2e649233,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6aed649864726473582ea78d2e649233, type: 3}
+--- !u!1 &497912725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7770902384930390026, guid: 6aed649864726473582ea78d2e649233,
+    type: 3}
+  m_PrefabInstance: {fileID: 497912724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &881696538
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iceSphere: {fileID: 6837956048770818893, guid: 89980a03a504b42adb0e2057b6306f87,
     type: 3}
-  portal: {fileID: 1742899641471652, guid: 6aed649864726473582ea78d2e649233, type: 3}
+  portal: {fileID: 497912725}
   powerUp: {fileID: 0}
   initialWave: 1
   increaseEachWave: 1
