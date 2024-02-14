@@ -79,11 +79,17 @@ public class PlayerController : MonoBehaviour
         playerRB.drag = GameManager.Instance.playerDrag;
         moveForce = GameManager.Instance.playerMoveForce;
         focalpoint = GameObject.Find("Focal Point").transform;
+        gameObject.layer = LayerMask.NameToLayer("Player");
     }
 
     private void FixedUpdate()
     {
         Move();
+        if(transform.position.y < -10)
+        {
+            GameManager.Instance.gameOver = true;
+            Debug.Log("You Lost");
+        }
     }
 
     private void Move()
@@ -106,12 +112,23 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        if(other.CompareTag("Portal"))
+        {
+            gameObject.layer = LayerMask.NameToLayer("Portal");
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-
+        if (other.CompareTag("Portal"))
+        {
+            gameObject.layer = LayerMask.NameToLayer("Player");
+            if(transform.position.y <= other.transform.position.y - 1f)
+            {
+                transform.position = Vector3.up * 25;
+                GameManager.Instance.switchLevel = true;
+            }
+        }
     }
 
     private IEnumerator PowerUpCooldown(float cooldown)

@@ -34,6 +34,10 @@ public class SpawnManager : MonoBehaviour
     {
         islandSize = island.GetComponent<MeshCollider>().bounds.size;
         waveNumber = initialWave;
+        if (GameManager.Instance.debugSpawnPortal)
+        {
+            portalByWaveDuration = 99;
+        }
     }
 
     private void Update()
@@ -73,8 +77,8 @@ public class SpawnManager : MonoBehaviour
 
     private Vector3 SetRandomPosition(float posY)
     {
-        float randomX = Random.Range(-islandSize.x / 2f, islandSize.x / 2f);
-        float randomZ = Random.Range(-islandSize.z / 2f, islandSize.z / 2f);
+        float randomX = Random.Range(-islandSize.x / 2.5f, islandSize.x / 2.5f);
+        float randomZ = Random.Range(-islandSize.z / 2.5f, islandSize.z / 2.5f);
         return new Vector3(randomX, posY, randomZ);
     }
 

@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Roguelike Prototypes/Level 1.unity
+    guid: a4b96ad7a65484fd4a83cb97540eee50
+  - enabled: 1
+    path: Assets/Scenes/Roguelike Prototypes/Level 2.unity
+    guid: 64dfdfe1572084aebb8c6851426dd343
   m_configObjects: {}
