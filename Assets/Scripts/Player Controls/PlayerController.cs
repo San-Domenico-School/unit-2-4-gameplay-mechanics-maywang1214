@@ -116,6 +116,12 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.layer = LayerMask.NameToLayer("Portal");
         }
+        if(other.gameObject.CompareTag("PowerUp"))
+        {
+            PowerUpController powerUpController = other.GetComponent<PowerUpController>();
+            other.gameObject.SetActive(false);
+            StartCoroutine(PowerUpCooldown(powerUpController.GetCooldown()));
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -133,6 +139,12 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator PowerUpCooldown(float cooldown)
     {
-        yield return null;  // replace with correct code later
+        hasPowerUp = true;
+        powerUpIndicator.intensity = 3.5f;
+
+        yield return new WaitForSeconds(cooldown);
+
+        hasPowerUp = false;
+        powerUpIndicator.intensity = 0.0f;
     }
 }
